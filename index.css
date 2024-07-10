@@ -1,0 +1,399 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    height: 100vh;
+    width: 100%;
+    /* background-color: purple; */
+}
+
+header{
+    height: 45px;
+    width: 100%;
+    background-color: rgba(11, 238, 125, 0.8);
+    opacity: 1;
+    padding-top: 10px;
+    text-align: center;
+    animation-name: colorAnimate;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+}    
+
+
+@keyframes colorAnimate {
+    from {background-color: rgba(11, 238, 125, 0.8);}
+    to { background-color: rgb(9, 160, 236);}
+    
+}
+
+nav a {    
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: capitalize;
+    margin: 60px;
+    font-weight: 600px;
+    position: relative;
+    
+}
+
+nav a:hover {
+    color: rgb(30, 30, 194);
+}
+
+nav a:active {
+    color: rgb(183, 62, 62);
+
+}
+
+nav a::before{
+    content: ' ';
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: rgb(30, 30, 194);
+    visibility: hidden;
+    transition: all .5s;
+}
+
+nav a:hover::before{
+    width: 100%;
+    visibility: visible;
+
+}
+
+
+button {
+    position: relative;
+    left: 120px;
+    padding: 5px;
+    border: 1px double black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+#content {
+    height: 520px;
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 8px;
+    background-image: linear-gradient(rgb(73, 73, 138) ,rgb(140, 140, 120), rgb(242, 227, 230));
+    /* --bg-image: url(./img/pngtree-school-library-college-students-study-warm-flat-wind-background-picture-image_2151141.jpg); */
+    --bg-image-opacity: 0.40;
+    position: relative;
+    isolation: isolate;
+
+}
+
+#content::after {
+    content: ' ';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    opacity: var(--bg-image-opacity) ;
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-position: center;
+}
+
+.box1 {
+    height: 210px;
+    width: 100%;
+    display: flex;
+}
+
+.boxcover{
+    height: 180px;
+    width: 180px;
+
+}
+div>img{
+    height: 180px;
+    width: 180px;
+    border-radius: 10px;
+    position: relative;
+    left: 120px;
+    top: 30px;
+    transition: all;
+    animation-name: transformAnimate;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes transformAnimate {
+    from { transform: scale(0.9);}
+    to { transform: scale(1.03)}
+    
+}
+
+.box2 {
+    height: 170px;
+    width: 380px;
+    position: relative;
+    top: 35px;
+    left: 280px;
+}
+
+.htext1 {
+    color: black;
+    padding: 10px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+}
+
+.htext1:before {
+    content: ' ';
+    position: absolute;
+    top: 38px;
+    left: 2px;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(30, 30, 194);
+    transform: scaleX(0);
+    transition: all .5s;
+    animation-name: textAnimate;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 5
+}
+
+.htext1:hover:before {
+    transform: scaleX(1);
+}
+
+.box2>div>h1:hover {
+    color: blue;
+}
+
+
+p{
+    color: rgb(222, 219, 219);
+    opacity: 1;
+    margin-left: 6px;
+}
+
+p:hover{
+    color: #fff;
+}
+
+.ptext{
+    height: 65px;
+    border: 3px double black;
+    border-radius: 15px;
+
+}
+
+.box3 {
+    height: 170px;
+    width: 250px;
+    border: 2px dotted black;
+    border-radius: 15px;
+    padding: 10px;
+    position: absolute;
+    bottom: 1px;
+    left: 470px;
+}
+
+.box3>div>h1{
+    color: rgb(56, 45, 45);
+    display: inline-block;
+    position: relative;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+    
+}
+
+.box3>div>h1:hover{
+    color: rgb(61, 61, 236);
+}
+
+.box3>ul {
+    position: relative;
+    left: 25px;
+    color: rgb(99, 89, 89); 
+    padding: 2px;
+}
+
+.box3>ul>a {
+    text-decoration: none;  
+}
+
+@keyframes textAnimate {
+    from {transform: scaleX(0);}
+    to {transform: scaleX(100%);}
+}
+
+
+.box4 {
+    height: 160px;
+    width: 85%;
+    margin-top: 15px;
+    position: absolute;
+    left: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    justify-content: space-between ;
+    
+}
+
+.std {
+    height: 150px;
+    width: 200px;
+    border: 4px double rgb(109, 99, 99);
+    border-radius: 15px;
+    margin: 8px;
+    font-weight: bolder;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+    
+}
+
+.std:hover {
+    transform: scale(1.05);
+}
+
+.btn1 {
+    position: relative;
+    top: 38px;
+    left: 80px;
+    background-color: rgb(206, 114, 206);
+    color: white;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+}
+
+.btn1:hover{
+    color: white;
+    background-color: rgb(85, 100, 218);
+
+}
+
+.btn1:active{
+    color: brown;
+}
+
+.prt{
+    height: 150px;
+    width: 200px;
+    border: 4px double rgb(109, 99, 99);
+    border-radius: 15px;
+    margin: 8px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    right: 30px;
+    font-weight: bolder;
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+}
+
+.prt:hover {
+    transform: scale(1.05);
+}
+
+.btn2 {
+    position: relative;
+    top: 38px;
+    left: 80px;
+    background-color:rgb(206, 114, 206);
+    color: white;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+}
+
+.btn2:hover{
+    color: white;
+    background-color: rgb(85, 100, 218);
+
+}
+
+.btn2:active{
+    color: brown;
+}
+
+.amn {
+    height: 150px;
+    width: 200px;
+    border: 4px double rgb(109, 99, 99);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    right: 60px;
+    margin: 8px;
+    font-weight: bolder;
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+    
+}
+
+
+.amn:hover {
+    transform: scale(1.05)
+}
+
+.btn3 {
+    position: absolute;
+    top: 96px;
+    left: 75px;
+    color: white;
+    background-color:rgb(206, 114, 206);
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+}
+
+.btn3:hover{
+    color: white;
+    background-color: rgb(85, 100, 218)
+
+}
+
+.btn3:active{
+    color: brown;
+}
+
+.head{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 220px
+}
+
+#footer {
+    height: 98px;
+    width: 100%;
+    border: 1px solid black;
+    background-color: rgb(151, 142, 142);
+    padding: 5px;
+}
+
+#footer>div{
+    text-align: center;
+    color: rgb(41, 36, 36);
+}
+
+.message1>p {
+    color: #fff;
+}
+
